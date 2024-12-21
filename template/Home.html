@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheryians Coding School | Learn Coding in India</title>
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+</head>
+<body>
+    <header>
+        <nav style="width: 100%;height: 10vh;background-color: transparent;font-family: NeueMachina;">
+            <a href="{% url 'app1:name' %}" id="name"><img src="{% static 'images/lion_logo.png' %}" alt="" width="20vw"> Sheryians coding school</a>
+            <a href="{% url 'app1:home' %}" class="buttons">Home</a>
+            <a href="{% url 'app1:courses' %}" class="buttons">Courses</a>
+            <a href="{% url 'app1:bootCamp' %}" class="buttons">Bootcamp(Kodr)</a>
+            <a href="{% url 'app1:requestCallBack' %}" class="buttons">Request Callback</a>
+            <a href="{% url 'app1:signIn' %}" class="buttons" id="signIn_button">Sign In</a>
+        </nav>
+    </header>
+    {% block body %}
+    <div>
+        <p style="text-align: center;color: white;font-size: 6vw;margin-top: 7vh;font-family: NeueMachina;">
+            We only <span style="color:#24cfa6;">teach</span><br>
+            what we are really <br>
+            really <i>good</i> at.
+        </p>
+        <div style="color: white;width: 16vw;height: 11.11vh;font-size: 1.1vw;position: absolute;top: 63vh;right: 6.94vw;font-family: 'Helvetica';">
+            Get ready to <span style="color: #24cfa6;">accelerate your career </span>with customized courses and leave your mark in the tech industry
+        </div>
+        <a style="padding: 1.5vh 2vw;background-color: #24cfa6;border-radius: 0.69vw;position: relative;top: 8vh;left: 36%;font-size: 1.7vw;text-decoration: none;color: black;font-family: 'Helvetica';" href="{% url 'app1:courses' %}">
+            Check Courses-Make an Impact
+        </a>
+    </div><br>
+    <div style="position: relative;top: 10.78vh;font-family: NeueMachina;">
+        <div class="users" style="transform: translate(-150%);">
+            <b style="font-size: 2.2vw;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                25k+
+            </b> <br>
+            Students taught
+        </div><br>
+        <div class="users">
+            <b style="font-size: 2.2vw;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                20+
+            </b><br>
+            Instructors
+        </div><br>
+        <div class="users" style="transform: translate(150%);">
+            <b style="font-size: 2.2vw;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                431k+
+            </b><br>
+            Youtube Subs.
+        </div><br>
+    </div>
+    <div>
+        <p style="text-align: center;color: white;font-size: 3vw;margin-top: 40.67vh;font-family: NeueMachina;">
+            we do whatever it takes to help you <br>
+            <span style="color: #24cfa6;">understand the concepts</span>
+        </p>
+    </div><br><br>
+    <div style="width: 100%;height:130vh ;">
+        <iframe width="656" height="369" src="https://www.youtube.com/embed/60SRAWmMXyc" title="You Are Not Yet Ready | Placements | Open Source" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
+        <a href="" id="explore">Explore free learning</a>
+    </div>
+
+    <span style="font-size: 3.2vw;color: white;margin-left: 5vw;font-family: NeueMachina;">
+        Courses Offered.
+    </span>
+
+    {% endblock body %}
+
+    {% block courses %}
+
+    <div style=" width:100%;height: 161.11vh;color: white;margin-top: 4.44vh;margin-bottom: 46.67vh;"> 
+        <div style="float: left;margin-left: 5vw;margin-top: 5vh;">
+            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
+                <img src="../static/images/course_img4.webp" alt="" class="course_img" >
+                <p class="para">Front-End Domination:Create <br> Anything with Code
+                </p><br>
+                <a href="" class="language">HINDI</a>
+                <p class="discount">Limited Time Discount</p>
+                <span class="amount">₹4999</span><strike style="color: gray;padding-left: 4vw;">₹9999</strike>
+                <a href="" class="off">
+                50% OFF</a>
+            </div><br><br>
+            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
+        </div>
+        
+        <div style="float: left;margin-left: 2.5vw;margin-top: 5vh;">
+            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
+                <img src="../static/images/course_img3.webp" alt="" class="course_img">
+                <p class="para">Back-End Domination:Create <br> Efficient Back-End
+                </p><br>
+                <a href="" class="language">HINDI</a>
+                <p class="discount">Limited Time Discount</p>
+                <span class="amount">₹5999</span><strike style="color: gray;padding-left: 4vw;">₹11999</strike>
+                <a href="" class="off">
+                    50% OFF</a>
+            </div><br><br>
+            <a href="{% url 'app1:courses' %}" class="details">View Details</a>  
+        </div>
+
+        <div style="margin-top: 5vh;margin-left: 2.5vw;float: left;">
+            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
+                <img src="../static/images/course_img5.webp" alt="" class="course_img">
+                <p class="para">Aptitude & Reasoning For <br> Campus Placements
+                </p><br>
+                <a href="" class="language">HINGLISH</a>
+                <p class="discount">Black Friday Sale</p>
+                <span class="amount">₹999</span><strike style="color: gray;padding-left: 4vw;">₹1500</strike>
+                <a href="" class="off">
+                    33% OFF</a>
+            </div><br><br>
+            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
+        </div>
+
+        <div style="margin-top: 17vh;margin-left: 5vw;float: left;">
+            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
+                <img src="../static/images/course_img2.webp" alt="" class="course_img" >
+                <p class="para">Java & DSA Domination
+                </p><br>
+                <a href="" class="language">HINGLISH</a>
+                <p class="discount">Limited Time Discount</p>
+                <span class="amount">₹4999</span> <strike style="color: gray;padding-left: 4vw;">₹9999</strike>
+                <a href="" class="off">
+                   50% OFF</a>
+            </div><br><br>
+            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
+        </div>
+
+        <div style="margin-top: 17vh;margin-left: 2.5vw;float: left;">
+            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
+                <img src="../static/images/course_img1.webp" alt="" class="course_img" >
+                <p class="para">Three.js Domination</p><br>
+                <a href="" class="language">HINDI</a>
+                <p class="discount">Black Friday Sale</p>
+                <span class="amount">₹2499</span><strike style="color: gray;padding-left: 4vw;">₹3500</strike>
+                <a href="" class="off">
+                    29% OFF</a>
+            </div><br><br>
+            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
+        </div>
+
+    </div>
+
+    {% endblock courses %}
+
+    {% block companies %}
+
+    <div style="text-align: center;">
+        <h2 id="companies">
+            Top <span style="color: #24cfa6;">companies</span> our students 
+            <br>working with
+        </h2>
+        <img src="../static/images/companies_CcvVE6pUo.webp" alt="" id="logos">
+    </div>
+    <a style="padding: 1.77vh 2.83vw;background-color: #24cfa6;border-radius: 0.8vw;position: relative;top: 11.78vh;left: 41%;font-size: 1.8vw;text-decoration: none;color: black;font-family: 'Helvetica';font-weight: 600;" href="{% url 'app1:courses' %}">
+        Explore Courses
+    </a>
+
+    {% endblock companies %}
+
+    {% block footer %}
+    <footer>
+        <div id="company_footer">
+            <h3 style="margin-bottom: 5vh;">COMPANY</h3>
+            <a href="" class="footer_elements">About Us</a><br><br>
+            <a href="" class="footer_elements">Support</a><br><br>
+            <a href="" class="footer_elements">Privacy Policy</a><br><br>
+            <a href="" class="footer_elements">Terms and Condition</a><br><br>
+            <a href="" class="footer_elements">Pricing and Refund</a><br><br>
+            <a href="" class="footer_elements">Hire From Us</a><br><br>
+            <a href="" class="footer_elements">Bug Bounty</a><br><br>
+        </div>
+        <div id="community_footer">
+            <h3 style="margin-bottom: 5vh;">COMMUNITY</h3>
+            <a href="" class="footer_elements">Inertia</a><br><br>
+            <a href="" class="footer_elements">Discord</a><br><br>
+        </div>
+        <div id="get_in_touch_footer">
+            <h3 style="margin-bottom: 5vh;">Get In Touch</h3>
+            <a href="" class="footer_elements">+91 8109161752,</a><br><br>
+            <a href="" class="footer_elements">+91 9691778470</a><br><br>
+            <a href="" class="footer_elements">hello@sheryians.com</a><br><br>
+            <a href="" class="footer_elements">23-B,Indrapuri Sector C,Bhopal(MP),462021</a><br><br>
+        </div>
+        <div>
+            <img src="../static/images/lion_logo.png" alt="" id="lion_footer">
+            <p  style="color: white;margin-left: 5vw;">Let's connect with our socials</p>
+        </div>
+        <h2 style="text-align: center;color: white;font-size: 1.2vw;margin-top: 41vh;">
+            Copyright © 2024 Sheryians Pvt.Ltd. <br> All Rights Reserved.
+        </h2><br><br>
+    </footer>
+    {% endblock footer %}
+</body>
+</html>

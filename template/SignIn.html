@@ -1,0 +1,50 @@
+{% extends 'Home.html' %}
+
+{% block body %}
+
+<fieldset style="width: 26vw;height: 200vh;color: white;margin-left: 39%;border: none;font-family:'Helvetica';margin-top: 6vh;">
+
+    <h1 style="margin-bottom: 5vh;">
+        Sign In
+    </h1>
+    <a href="{% url 'app1:signIn' %}" style="color: white;font-size: 1.3vw;text-decoration: none;margin-right: 1.8vw;">
+        Phone
+    </a>
+    <a href="{% url 'app1:email' %}" style="color: white;font-size: 1.3vw;text-decoration: none;">
+        Email
+    </a>
+
+    <br><br><br><br><br>
+
+    <span style="font-size: 1.1vw;">
+        Mobile Number*
+    </span><br>
+    <input type="text" placeholder="Enter Your Mobile Number" style="background-color: rgb(45, 42, 42);padding: 1vh 11vw 1vh 1vw;margin-top: 2vh;">
+
+    <br><br><br><br><br>
+
+    ----------------------------Or-----------------------------
+    <br><br><br>
+    <a href="https://www.google.com" style="font-size: 1.3vw;color: white;text-decoration: none;border: 0.1vw solid white;padding: 2vh 5vw;border-radius: 2vw;"> 
+        <img src="../static/images/googleicon.png" alt="" style="width: 2vw;height: 4vh;margin-bottom: -1vh;">
+        Continue with Google
+    </a><br><br><br>
+    <a href="" style="font-size: 1.3vw;color: white;text-decoration: none;border: 0.1vw solid white;padding: 2vh 6.2vw;border-radius: 2vw;">
+        Create a New Account
+    </a>
+
+
+</fieldset>
+
+
+
+{% endblock body %}
+
+{% block footer %}
+{% endblock footer %}
+
+{% block companies %}
+{% endblock companies %}
+
+{% block courses %}
+{% endblock courses %}

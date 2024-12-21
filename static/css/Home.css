@@ -1,0 +1,180 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: NeueMachina;
+    src: url(../fonts/NeueMachina-Light.otf);
+}
+body{
+    background-color: rgb(1, 5, 6);
+}
+.buttons{
+    position: relative;
+    top: 5vh;
+    left: 24vw;
+    padding: 5vh;
+    font-size: 2.5vh;
+    text-decoration: none;
+    color: white;
+}
+#name{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+    position: relative;
+    top: 5vh;
+    left: 6vw;
+    font-family: NeueMachina;
+}
+#signIn_button{
+    background-color: #24cfa6;
+    padding: 0.69vw 1.39vw;
+    color: black;
+    border-radius: 0.35vw;
+    font-family: 'Helvetica';
+}
+.users{
+    color: white;
+    width: 13.89vw;
+    height: 11.11vh;
+    position: absolute;
+    left: 43%;
+    top: 7.78vh;
+    text-align: center;
+    font-size: 1.39vw;
+}
+#video{
+    width: 73.5vw;
+    height: 90vh;
+    position: relative;
+    top: 3.33vh;
+    left: 15vw;
+    border-radius: 2.08vw;
+}
+#explore{
+    background-color: #24cfa6;
+    padding: 1.21vh 3.43vw;
+    border-radius: 0.69vw;
+    position: relative;
+    top: 15.11vh;
+    font-size: 1.8vw;
+    text-decoration: none;
+    font-family: 'Helvetica';
+    color: black;
+    left: -34.78vw;
+}
+#companies{
+    font-family: NeueMachina;
+    color: white;
+    font-weight: lighter;
+    font-size: 3.75vw;
+    margin-top: 60.89vh;
+}
+#logos{
+    width: 72.92vw;
+    position: relative;
+    top: 7vh;
+}
+footer{
+    position: relative;
+    top: 35vh;
+    border-top: 0.1vh solid white;
+    border-bottom: 0.1vh solid white;
+    height: 75vh;
+    font-family: 'Helvetica';
+}
+#company_footer,#community_footer,#get_in_touch_footer{
+    width: 15vw;
+    height: 55vh;
+    position: absolute;
+    left: 50%;
+    color: white;
+    top: 16vh;
+    font-family: 'Helvetica';
+    font-size: 1.1vw;
+    font-weight: lighter;
+}
+#company_footer{
+    transform: translate(-70%);
+}
+#community_footer{
+    transform: translate(70%);
+}
+#get_in_touch_footer{
+    transform: translate(200%);
+}
+.footer_elements{
+    text-decoration: none;
+    color: white;
+}
+.footer_elements:hover{
+    color: #24cfa6;
+}
+#lion_footer{
+    width: 3vw;
+    margin-left: 5vw;
+    margin-top: 26vh;
+    margin-bottom: 1vh;
+}
+.course_img{
+    width: 28.3vw;
+    height: 34vh;
+    border-radius: 1.5vw 1.5vw 0vw 0vw;
+}
+.para{
+    font-family: 'Helvetica';
+    font-size: 1.6vw;
+    margin-top: 3.5vh;
+    margin-left: 1.39vw;
+}
+.language{
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: 'Helvetica';
+    margin-top: 1vh;
+    margin-left: 1.5vw;
+    padding: 0.8vh 0.89vw;
+    background-color: rgb(52, 52, 52);
+    border-radius: 0.49vw;
+    color: white;
+}
+.discount{
+    color: #24cfa6;
+    font-size: 1.2vw;
+    font-family: 'Helvetica';
+    margin-top: 9.5vh;
+    margin-left: 1.5vw;
+}
+.amount{
+    margin-left: 1.5vw;
+    font-size: 1.8vw;
+    font-family: 'Helvetica';
+    margin-right: -3vw;
+}
+.off{
+    margin-left: 8vw;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 0.49vw;
+    padding: 1vh 1vw;
+    font-family: 'Helvetica';
+}
+.details{
+    color: black;
+    text-decoration: none;
+    padding: 1.77vh 9.5vw;
+    font-family: 'Helvetica';
+    font-size: 1.6vw;
+    font-weight: bold;
+    background-color: #24cfa6;
+    border-radius: 1vw;
+}
+.video-container {
+    display: flex;
+    justify-content: space-between;
+}
+.video-left, .video-right {
+    flex: 5;
+}

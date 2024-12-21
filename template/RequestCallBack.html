@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+    <link rel="stylesheet" href="../static/css/RequestCallBack.css">
+</head>
+<body>
+    <div id="div_container">
+        <a href="{% url 'app1:home' %}" id="symbol" onclick="toCloseOTPContainer()">×</a>
+        <h3 id="heading_1">Request a Callback</h3><br>
+        <p id="paragraph">
+            Fill the form below to request a Callback <br>
+            from  our terms.
+        </p><br>
+        <label for="" class="label_content">Name</label> 
+        <br>
+        <input type="" class="input_box" placeholder="Name">
+        <br> <br>
+        <label for="" class="label_content">Phone</label>
+        <br>
+        <input type="text" class="input_box" placeholder="Phone">
+        <br><br>
+        <label for="" class="label_content">Select Date and Time</label>
+        <br>
+        <input type="datetime-local" class="input_box">
+        <br><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </div>
+    <script src="../static/js/RequestCallBack.js"></script>
+</body>
+</html>
