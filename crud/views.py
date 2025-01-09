@@ -4,7 +4,11 @@ from .forms import UsersForm
 
 # Create your views here.
 def create(request):
-    pass
+    if request.method=="POST":
+        f=UsersForm(request.POST)
+        if f.is_valid():
+            f.save()
+    return redirect('app1:requestCallBack')
 
 def read(request):
     pass

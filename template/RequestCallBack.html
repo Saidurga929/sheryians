@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../static/css/RequestCallBack.css">
 </head>
 <body>
-    <form action="">
+    <form action="" method="post">
+        {% csrf_token %}
         <div id="div_container">
             <a href="{% url 'app1:home' %}" id="symbol" onclick="toCloseOTPContainer()">×</a>
             <h3 id="heading_1">Request a Callback</h3><br>
@@ -17,15 +18,15 @@
             </p><br>
             <label for="" class="label_content">Name</label> 
             <br>
-            <input type="" class="input_box" placeholder="Name">
+            <input type="" class="input_box" placeholder="Name" name="Name">
             <br> <br>
             <label for="" class="label_content">Phone</label>
             <br>
-            <input type="text" class="input_box" placeholder="Phone">
+            <input type="text" class="input_box" placeholder="Phone" name="Phone">
             <br><br>
             <label for="" class="label_content">Select Date and Time</label>
             <br>
-            <input type="datetime-local" class="input_box">
+            <input type="datetime-local" class="input_box" name="Date_And_Time">
             <br><br><br>
             <input type="submit" value="Submit" id="submit">
         </div>
