@@ -8,7 +8,7 @@ def create(request):
         f=UsersForm(request.POST)
         if f.is_valid():
             f.save()
-    return redirect('app1:requestCallBack')
+    return redirect('app1:requestCallBack',{'form':UsersForm()})
 
 def read(request):
     pass
