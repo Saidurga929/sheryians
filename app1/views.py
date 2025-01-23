@@ -1,19 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import Courses
+from .forms import Enquiry,EnquiryForm
 
 # Create your views here.
 def name(request):
     return render(request,'Home.html')
 
 def home(request):
-    return render(request,'Home.html')
+    datas=Courses.objects.all()
+    print(datas)
+    return render(request,'Home.html',{'courses':datas})
 
 def courses(request):
-    return render(request,'Courses.html')
+    datas=Courses.objects.all()
+    return render(request,'Courses.html',{'courses':datas})
 
 def bootCamp(request):
     return render(request,'BootCamp.html')
 
 def requestCallBack(request):
+    if request.method=="POST":
+        f=EnquiryForm(request.POST)
+        if f.is_valid():
+            f.save()
+            return redirect('app1:home')
     return render(request,'RequestCallBack.html')
 
 def signIn(request):
@@ -21,3 +31,7 @@ def signIn(request):
 
 def email(request):
     return render(request,'Email.html')
+
+def showcourse(request,id):
+    course=Courses.objects.get(id=id)
+    return render(request,'showcourse.html',{'course':course})

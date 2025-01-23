@@ -72,74 +72,24 @@
     {% block courses %}
 
     <div style=" width:100%;height: 161.11vh;color: white;margin-top: 4.44vh;margin-bottom: 46.67vh;"> 
-        <div style="float: left;margin-left: 5vw;margin-top: 5vh;">
+
+        {% for i in courses %}
+
+        <div style="float: left;margin-left: 3vw;margin-top: 5vh;">
             <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
-                <img src="../static/images/course_img4.webp" alt="" class="course_img" >
-                <p class="para">Front-End Domination:Create <br> Anything with Code
+                <img src="{{ i.image.url }}" alt="" class="course_img" >
+                <p class="para">{{ i.name }} <br> Anything with Code
                 </p><br>
-                <a href="" class="language">HINDI</a>
+                <a href="" class="language">{{ i.lang }}</a>
                 <p class="discount">Limited Time Discount</p>
-                <span class="amount">₹4999</span><strike style="color: gray;padding-left: 4vw;">₹9999</strike>
+                <span class="amount">{{ i.price }}</span><strike style="color: gray;padding-left: 4vw;">₹9999</strike>
                 <a href="" class="off">
                 50% OFF</a>
             </div><br><br>
-            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
+            <a href="{% url 'app1:showcourse' i.id %}" class="details">View Details</a>
         </div>
-        
-        <div style="float: left;margin-left: 2.5vw;margin-top: 5vh;">
-            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
-                <img src="../static/images/course_img3.webp" alt="" class="course_img">
-                <p class="para">Back-End Domination:Create <br> Efficient Back-End
-                </p><br>
-                <a href="" class="language">HINDI</a>
-                <p class="discount">Limited Time Discount</p>
-                <span class="amount">₹5999</span><strike style="color: gray;padding-left: 4vw;">₹11999</strike>
-                <a href="" class="off">
-                    50% OFF</a>
-            </div><br><br>
-            <a href="{% url 'app1:courses' %}" class="details">View Details</a>  
-        </div>
-
-        <div style="margin-top: 5vh;margin-left: 2.5vw;float: left;">
-            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
-                <img src="../static/images/course_img5.webp" alt="" class="course_img">
-                <p class="para">Aptitude & Reasoning For <br> Campus Placements
-                </p><br>
-                <a href="" class="language">HINGLISH</a>
-                <p class="discount">Black Friday Sale</p>
-                <span class="amount">₹999</span><strike style="color: gray;padding-left: 4vw;">₹1500</strike>
-                <a href="" class="off">
-                    33% OFF</a>
-            </div><br><br>
-            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
-        </div>
-
-        <div style="margin-top: 17vh;margin-left: 5vw;float: left;">
-            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
-                <img src="../static/images/course_img2.webp" alt="" class="course_img" >
-                <p class="para">Java & DSA Domination
-                </p><br>
-                <a href="" class="language">HINGLISH</a>
-                <p class="discount">Limited Time Discount</p>
-                <span class="amount">₹4999</span> <strike style="color: gray;padding-left: 4vw;">₹9999</strike>
-                <a href="" class="off">
-                   50% OFF</a>
-            </div><br><br>
-            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
-        </div>
-
-        <div style="margin-top: 17vh;margin-left: 2.5vw;float: left;">
-            <div style="background-color: rgb(32, 32, 32);width: 28.3vw;height: 75vh;border-radius: 1.5vw;">
-                <img src="../static/images/course_img1.webp" alt="" class="course_img" >
-                <p class="para">Three.js Domination</p><br>
-                <a href="" class="language">HINDI</a>
-                <p class="discount">Black Friday Sale</p>
-                <span class="amount">₹2499</span><strike style="color: gray;padding-left: 4vw;">₹3500</strike>
-                <a href="" class="off">
-                    29% OFF</a>
-            </div><br><br>
-            <a href="{% url 'app1:courses' %}" class="details">View Details</a>
-        </div>
+    
+        {% endfor %}
 
     </div>
 
