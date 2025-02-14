@@ -8,7 +8,6 @@ def name(request):
 
 def home(request):
     datas=Courses.objects.all()
-    print(datas)
     return render(request,'Home.html',{'courses':datas})
 
 def courses(request):
